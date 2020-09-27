@@ -20,7 +20,9 @@ Variable dependiente: cantidad de contagios durante los 30 días entre distintos
 Variables independientes a analizar en esta parte del entregable
 
 Medidas preventivas (tiempo)
+
  a.Campañas informativas del covid: Evidencia la preocupación de cada país por difundir información sobre la pandemia
+ 
    - Base de datos: Campañas informativas afterweek
      - Variable independiente: infoalawk
      - Tipo de variable: ordinal
@@ -46,7 +48,7 @@ Población
  
   ii.Población Rural
   
-   - Base de datos: Porcentajes de población Rural
+  - Base de datos: Porcentajes de población Rural
       - Variable independiente: %pobrur18
       - Tipo de variable: numérica
       - Fuente: Banco Mundial
@@ -56,7 +58,9 @@ Población
   
   
 Capacidad Estatal
+
  a.Índice de Desarrollo Humano (Human Development Index): Indicador que integra las variables PBI, Educación y Esperanza de vida
+  
   - Base de datos: IDH
       - Variable independiente: HDI
       - Tipo de variable: numérica
@@ -74,18 +78,27 @@ Todo lo que está en este proyecto ("EstadCarla") es data "limpia".
 Para ver las bases originales, puedes ir al proyecto "Prueba".
 
 Medidas preventivas (tiempo)
+
  a.Campañas informativas del covid
+ 
     REVISA: public-campaigns-covid.csv
     
 Población
+
  a.Urbanización
+ 
   i.Población Urbana
+  
     REVISA: API_SP.URB.TOTL.IN.ZS_DS2_es_csv_v2_1347951.csv
+    
  ii.Población Rural
+ 
     REVISA: API_SP.RUR.TOTL.ZS_DS2_es_csv_v2_1352737.csv
 
 Capacidad Estatal
- a.Índice de Desarrollo Humano (Human Development Index):
+
+ a.Índice de Desarrollo Humano (Human Development Index)
+ 
     REVISA: IDH.xlsx
     
 ASIMISMO, el json es un archivo "colado". Es decir, no aporta a la investigación y solo está en este proyecto como parte de una prueba anterior. Por favor, solo omitir.
