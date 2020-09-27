@@ -1,11 +1,13 @@
 # EstadCarla
-
-Alumna: Carla Mendoza
 Grupo: 2
 
-Tema de trabajo:  Causas de las diferencias de la tasa de contagios de COVID-19 durante los primeros 30 días entre distintos países 
+Estudiante: Carla Mendoza
 
-Pregunta de investigación: ¿Qué factores explican la diferencia entre la cantidad de contagios por cada 100 mil habitantes durante los primeros 30 días entre distintos países?
+Tema de trabajo:
+Causas de las diferencias de la tasa de contagios de COVID-19 durante los primeros 30 días entre distintos países 
+
+Pregunta de investigación:
+¿Qué factores explican la diferencia entre la cantidad de contagios por cada 100 mil habitantes durante los primeros 30 días entre distintos países?
 
 Variable dependiente: cantidad de contagios durante los 30 días entre distintos países
 - Base de datos: Contagios al mes
