@@ -59,7 +59,10 @@ Capacidad Estatal
 
  
 ###READMEEE###
-Todo lo que está en este proyecto ("EstadCarla")Es data "limpia". Para ver las bases originales, puedes ir al proyecto "Prueba".
+
+Todo lo que está en este proyecto ("EstadCarla") es data "limpia". 
+
+Para ver las bases originales, puedes ir al proyecto "Prueba".
 
 Medidas preventivas (tiempo)
  a.Campañas informativas del covid
