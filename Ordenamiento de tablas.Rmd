@@ -1,0 +1,183 @@
+---
+title: "Ordemiento de tablas"
+output: html_notebook
+---
+
+Se supone que vamos a limpiar las tablas
+
+Esto es contagios
+```{r}
+linkcon= "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+datacon=import(linkcon)
+```
+
+Codigo de Jair
+```{r}
+WorldData<- datacon%>%
+  mutate(type="datacon")%>% 
+  tidyr::gather(Fecha,Valor,-c(type,"Province/State",
+                        "Country/Region",Lat,Long))
+
+Prueba1= WorldData%>%
+  filter(Valor>0)
+```
+Suma a la China
+```{r}
+names(Prueba1)[2]="Country"
+Paysxcon=aggregate(Valor # dependientes
+          ~ Country + Fecha, # nivel
+          data = Prueba1,    # data
+          sum)            # operacion
+```
+Chamba
+```{r}
+#30días
+tren= Paysxcon%>%
+  group_by(Country) %>%
+  mutate(w = ifelse(Fecha==nth(Fecha, 30), 1, 0)) %>%
+  filter(w==1) #nos quedamos con la fila n de cada país
+
+tren$Fecha=mdy(tren$Fecha)
+
+tren[,4]= NULL
+
+#7días
+sem= Paysxcon%>%
+  group_by(Country) %>%
+  mutate(w = ifelse(Fecha==nth(Fecha, 7), 1, 0)) %>%
+  filter(w==1) #nos quedamos con la fila n de cada país
+
+str(sem$Fecha)
+sem$Fecha=mdy(sem$Fecha)
+dataic$Fecha=as.Date(dataic$Fecha)
+
+sem[,4]= NULL
+```
+
+Esto es para hacer un merge de "Code" (Código Carlitos)
+```{r}
+link="https://github.com/CarlosGDiez/BasesLimpias/blob/master/Rigurosidad.csv?raw=true"
+library(rio)
+
+data=import(link)
+dim(data)
+data7=data
+data7[6:34]=NULL
+data7[7:15]=NULL
+data7$RegionCode=NULL
+data7$RegionName=NULL
+data3=data7
+data3$Date=NULL
+data3$GovernmentResponseIndex=NULL
+data3$RegionName=NULL
+data3$StringencyIndex=NULL
+names(data3)[1]="Country"
+names(data3)[2]="Code"
+#eliminamos paises repetidos. #advertencia algunas veces esta parte es lenta en leer, o lo era nates,a hora corre rapido
+data3=data3[!duplicated(data3$Country),]
+```
+A ver haz el merge pues
+```{r}
+sem=merge(sem,data3,all.x=T,all.y=T)
+sem$DIA7=paste0(sem$Code, sem$Fecha)
+
+tren=merge(tren,data3,by.x='Country', by.y='Country') 
+```
+
+
+Esto es la info de campañas
+```{r}
+infocamp = "https://raw.githubusercontent.com/CarlaMendozaE/Prueba/master/public-campaigns-covid.csv"
+dataic=import(infocamp)
+str(dataic$Date)
+
+names(dataic)[1]= "Country"
+names(dataic)[3]= "Fecha"
+
+dataic$Fecha=as.Date(dataic$Fecha,"%Y/%m/%d")
+
+dataic$DIA7=paste0(dataic$Code, dataic$Fecha)
+```
+Mergea
+```{r}
+cam7=merge(sem,dataic,by.x='DIA7', by.y='DIA7') 
+cam7[,1:5]=NULL
+names(cam7)=c("Country", "Code", "Fecha", "infoalawk")
+cam7[,3]=NULL
+```
+
+
+Esto es la info de pob.urbana
+```{r}
+xurb = "https://raw.githubusercontent.com/CarlaMendozaE/Prueba/master/API_SP.URB.TOTL.IN.ZS_DS2_es_csv_v2_1347951.csv"
+dataxurb=import(xurb)
+names(dataxurb)=(dataxurb[1,])
+
+dataxurb[,3:62]= NULL
+dataxurb[,4:5]= NULL
+
+names(dataxurb)[3]= "%poburb18"
+dataxurb$'%poburb18'=round(dataxurb$'%poburb18', digits = 2)
+
+dataxurb=dataxurb[c(-1,-61,-62,-63,-64,-65,-68,-73,-74,-95,-98,-102,-103,-104,-105,-107, -110,-128,-134,-135,-136,-139,-140,-142,-153,-156,-161,-170,-181,-191,-197,-198,-204,-215,-217,-218,-230,-231,-236,-238,-240,-241,-249),]
+dataxurb$num=c(1:222)
+rownames(dataxurb)=dataxurb[,4]
+dataxurb[,4]= NULL
+
+names(dataxurb)[2]= "Code"
+names(dataxurb)[1]= "Country"
+```
+
+
+
+Esto es la info de la pob.rural
+```{r}
+xrural = "https://raw.githubusercontent.com/CarlaMendozaE/Prueba/master/API_SP.RUR.TOTL.ZS_DS2_es_csv_v2_1352737.csv"
+dataxrural=import(xrural)
+names(dataxrural)=(dataxrural[1,])
+
+dataxrural[,3:62]= NULL
+dataxrural[,4:5]= NULL
+
+names(dataxrural)[3]= "%pobrur18"
+dataxrural$'%pobrur18'=round(dataxrural$'%pobrur18', digits = 2)
+
+dataxrural=dataxrural[c(-1,-61,-62,-63,-64,-65,-68,-73,-74,-95,-98,-102,-103,-104,-105,-107, -110,-128,-134,-135,-136,-139,-140,-142,-153,-156,-161,-170,-181,-191,-197,-198,-204,-215,-217,-218,-230,-231,-236,-238,-240,-241,-249),]
+dataxrural$num=c(1:222)
+rownames(dataxrural)=dataxrural[,4]
+dataxrural[,4]= NULL
+
+names(dataxrural)[2]= "Code"
+names(dataxrural)[1]= "Country"
+```
+
+
+
+Esto es la info de IDH
+```{r}
+IDH[,c(1,4,5,6,7,8,9)]=NULL
+names(IDH)[2]= "HDI"
+str(IDH$HDI)
+IDH$HDI= as.numeric(IDH$HDI)
+IDH$HDI=round(IDH$HDI, digits = 4)
+
+IDH=IDH[c(-63,-118,-156,-193:-222),]
+
+IDH=merge(IDH,data3,by.x='Country', by.y='Country') 
+
+IDH[,4]=IDH[,2]
+IDH[,2]=NULL
+names(IDH)[3]="HDI"
+
+write.csv(IDH,"IDH.csv", row.names = F)
+```
+
+Exportemos lo VERDADERAMENTE REAL HASTA LA MUERTE BBY
+```{r}
+write.csv(tren,"Contagios al mes", row.names = F)
+write.csv(dataxurb,"Porcentajes de población Urbana.csv", row.names = F)
+write.csv(dataxrural,"Porcentajes de población Rural.csv", row.names = F)
+write.csv(cam7,"Campañas informativas afterweek.csv", row.names = F)
+write.csv(IDH,"IDH.csv", row.names = F)
+```
+
