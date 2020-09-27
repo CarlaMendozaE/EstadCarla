@@ -11,7 +11,7 @@ Variable dependiente: cantidad de contagios durante los 30 días entre distintos
 - Base de datos: Contagios al mes
      - Variable: Valor
      - Tipo de variable: numérica
-     - Fuente: Banco Mundial
+     - Fuente: Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
      - Año de información: 2020
      - Justificación de la variable: Nuestro objetivo general es identificar sus causas
 
@@ -74,6 +74,8 @@ Capacidad Estatal
 ###READMEEE###
 
 Todo lo que está en este proyecto ("EstadCarla") es data "limpia". 
+
+El trabajo de limpieza puede encontrarse en el archivo "Ordenamiento de tablas.Rmd".
 
 Para ver las bases originales, puedes ir al proyecto "Prueba".
 
