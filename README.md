@@ -21,7 +21,7 @@ Variables independientes a analizar en esta parte del entregable
 
 Medidas preventivas (tiempo)
 
- a.Campañas informativas del covid: Evidencia la preocupación de cada país por difundir información sobre la pandemia
+Campañas informativas del covid: Evidencia la preocupación de cada país por difundir información sobre la pandemia
  
    - Base de datos: Campañas informativas afterweek
      - Variable independiente: infoalawk
@@ -34,7 +34,7 @@ Medidas preventivas (tiempo)
  
 Población
 
- a.Urbanización
+Urbanización
  
   i.Población Urbana: Evidencia el porcentaje de la población urbana de un país
   
@@ -59,7 +59,7 @@ Población
   
 Capacidad Estatal
 
- a.Índice de Desarrollo Humano (Human Development Index): Indicador que integra las variables PBI, Educación y Esperanza de vida
+Índice de Desarrollo Humano (Human Development Index): Indicador que integra las variables PBI, Educación y Esperanza de vida
   
   - Base de datos: IDH
       - Variable independiente: HDI
@@ -79,13 +79,13 @@ Para ver las bases originales, puedes ir al proyecto "Prueba".
 
 Medidas preventivas (tiempo)
 
- a.Campañas informativas del covid
+Campañas informativas del covid
  
     REVISA: public-campaigns-covid.csv
     
 Población
 
- a.Urbanización
+Urbanización
  
   i.Población Urbana
   
@@ -97,7 +97,7 @@ Población
 
 Capacidad Estatal
 
- a.Índice de Desarrollo Humano (Human Development Index)
+Índice de Desarrollo Humano (Human Development Index)
  
     REVISA: IDH.xlsx
     
