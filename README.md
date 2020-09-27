@@ -75,11 +75,11 @@ Capacidad Estatal
  
 ###READMEEE###
 
-Todo lo que está en este proyecto ("EstadCarla") es data "limpia". 
+Todo lo que está en este repositorio ("EstadCarla") es data "limpia". 
 
 El trabajo de limpieza puede encontrarse en el archivo "Ordenamiento de tablas.Rmd".
 
-Para ver las bases originales, puedes ir al proyecto "Prueba".
+Para ver las bases originales, puedes ir al repositorio "Prueba".
 
 Medidas preventivas (tiempo)
 
