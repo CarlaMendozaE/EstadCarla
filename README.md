@@ -26,25 +26,33 @@ Medidas preventivas (tiempo)
      - Tipo de variable: ordinal
      - Fuente: Banco Mundial
      - Año de información: 2020
-     - Justificación de la variable: Esta información permitirá determinar si, efectivamente, las campañas de información sobre la enfermedad ayudaron a mermar los contagios en el primer mes, si dio igual o si, por el contrario, los incitaron a aumentar.
+     - Justificación de la variable
+          Esta información permitirá determinar si, efectivamente, las campañas de información sobre la enfermedad ayudaron a mermar los contagios en el primer mes, si dio igual o si, por el contrario, los incitaron a aumentar.
  
  
 Población
+
  a.Urbanización
+ 
   i.Población Urbana: Evidencia el porcentaje de la población urbana de un país
+  
     - Base de datos: Porcentajes de población Urbana
       - Variable independiente: %poburb18
       - Tipo de variable: numérica
       - Fuente: Banco Mundial
       - Año de información: 2018
-      - Justificación de la variable: Esta información permitirá determinar si el hecho de que un país esté más urbanizado tiene relación con que tenga mayor cantidad de contagiados en el primer mes o no.
+      - Justificación de la variable
+          Esta información permitirá determinar si el hecho de que un país esté más urbanizado tiene relación con que tenga mayor cantidad de contagiados en el      primer mes o no.
+ 
   ii.Población Rural
+  
    - Base de datos: Porcentajes de población Rural
       - Variable independiente: %pobrur18
       - Tipo de variable: numérica
       - Fuente: Banco Mundial
       - Año de información: 2018
-      - Justificación de la variable: Esta información permitirá determinar si el porcentaje de ruralidad que un país posea tiene relación con que tenga mayor cantidad de contagiados en el primer mes o no.
+      - Justificación de la variable
+          Esta información permitirá determinar si el porcentaje de ruralidad que un país posea tiene relación con que tenga mayor cantidad de contagiados en el primer mes o no.
   
   
 Capacidad Estatal
@@ -54,7 +62,8 @@ Capacidad Estatal
       - Tipo de variable: numérica
       - Fuente: United Nations Development
       - Año de información: 2018
-      - Justificación de la variable: Esta información permitirá determinar si el hecho de que un país tenga un mayor IDH estaría relacionado con la cantidad de contagiados que tuvo durante el primer mes o no.
+      - Justificación de la variable
+          Esta información permitirá determinar si el hecho de que un país tenga un mayor IDH estaría relacionado con la cantidad de contagiados que tuvo durante el primer mes o no.
 
 
  
