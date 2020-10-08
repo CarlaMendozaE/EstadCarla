@@ -9,7 +9,7 @@ Causas de las diferencias de la tasa de contagios de COVID-19 durante los primer
 Pregunta de investigación:
 ¿Qué factores explican la diferencia entre la cantidad de contagios por cada 100 mil habitantes durante los primeros 30 días entre distintos países?
 
-Variable dependiente: cantidad de contagios durante los 30 días entre distintos países
+Variable dependiente: cantidad de contagios durante los primeros 30 días entre distintos países
 - Base de datos: Contagios al mes
      - Variable: Valor
      - Tipo de variable: numérica
@@ -48,7 +48,7 @@ Urbanización
       - Justificación de la variable
           Esta información permitirá determinar si el hecho de que un país esté más urbanizado tiene relación con que tenga mayor cantidad de contagiados en el      primer mes o no.
  
-  ii.Población Rural
+  ii.Población Rural: Evidencia el porcentaje de la población rural de un país
   
   - Base de datos: Porcentajes de población Rural
       - Variable independiente: %pobrur18
