@@ -1,6 +1,8 @@
 # EstadCarla
 Grupo: 2
 
+La base de datos limpia y conglomerada se llama "Carla"
+
 Estudiante: Carla Mendoza
 
 Tema de trabajo:
