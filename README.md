@@ -1,9 +1,11 @@
 # EstadCarla
 Grupo: 2
 
-La base de datos limpia y conglomerada se llama "Carla"
+La base de datos limpia y conglomerada se llama "Data" y el proceso de su configuración se puede encontrar en el Rmd "Estadística 2".
 
 Estudiante: Carla Mendoza
+
+La base de datos limpia y conglomerada de las variables que he recolectado se llama "Carla" y su proceso de configuración se puede encontrar en "Ordenamiento de tablas".
 
 Tema de trabajo:
 Causas de las diferencias de la tasa de contagios de COVID-19 durante los primeros 30 días entre distintos países 
