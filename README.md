@@ -1,7 +1,7 @@
 # EstadCarla
 Grupo: 2
 
-La base de datos limpia y conglomerada se llama "Data" y el proceso de su configuración se puede encontrar en el Rmd "Estadística 2".
+La base de datos limpia y conglomerada, y el proceso de su configuración se puede encontrar en el Rmd "Da".
 
 Estudiante: Carla Mendoza
 
